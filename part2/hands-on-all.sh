@@ -16,11 +16,9 @@ docker compose exec feeder-master-db ./feed_dump_to_elasticsearch.py
 
 # ベースラインのランキングロジックを評価する
 
-## ハンズオンにおけるランキングロジックのオフライン評価
+## ベースラインのランキングロジックのオフライン評価
 
-### ベースラインのランキングロジックのオフライン評価
-
-#### テスト用検索キーワードセットの収集
+### テスト用検索キーワードセットの収集
 
 docker compose exec workspace \
     sh -c "
@@ -33,12 +31,12 @@ docker compose exec workspace \
 docker compose exec workspace \
     sh -c "cat hands_on_keywords.txt | awk 'NR==1,NR==500 {print}' > hands_on_keywords.txt.test"
 
-#### ランキング結果の取得と関連度の付与
+### ランキング結果の取得と関連度の付与
 
 docker compose exec workspace \
     ./collect_responses.py baseline baseline.txt hands_on_keywords.txt.test
 
-#### 評価指標の計算
+### 評価指標の計算
 
 docker compose exec workspace ./calc_ndcg.py baseline.txt
 
@@ -92,7 +90,7 @@ docker compose exec workspace ./calc_ndcg.py mlr.txt
 
 # 検索ランキングモデルによる性能影響の測定
 
-## 検索ランキングモデルをオンオフしてレイテンシを比較
+## 検索ランキングモデルをオンオフしてレイテンシーを比較
 
 docker compose exec workspace \
     ./collect_responses.py baseline --extract-hits-and-took benchmark-baseline.txt hands_on_keywords.txt.test
@@ -104,7 +102,7 @@ docker compose exec workspace \
 
 docker compose exec workspace ./calc_took.py benchmark-mlr.txt
 
-## ヒット件数とレイテンシの同時測定
+## ヒット件数とレイテンシーの同時測定
 
 docker compose exec workspace \
     ./scatter_plot.py benchmark-mlr.txt scatter-mlr.png
