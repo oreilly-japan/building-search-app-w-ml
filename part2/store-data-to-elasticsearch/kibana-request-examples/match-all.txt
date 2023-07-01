@@ -1,0 +1,4 @@
+GET /handson_test_index/_search
+{
+  "query": { "match_all": {} }
+}

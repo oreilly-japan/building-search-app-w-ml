@@ -1,0 +1,109 @@
+{
+  "took" : 26,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 17,
+      "relation" : "eq"
+    },
+    "max_score" : 14.577337,
+    "hits" : [
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "440219",
+        "_score" : 14.577337,
+        "_source" : {
+          "title" : "TMNT (movie)"
+        }
+      },
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "674208",
+        "_score" : 14.248088,
+        "_source" : {
+          "title" : "Ninja (gamer)"
+        }
+      },
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "510171",
+        "_score" : 11.936731,
+        "_source" : {
+          "title" : "Template:Six Flags St. Louis"
+        }
+      },
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "383547",
+        "_score" : 11.710344,
+        "_source" : {
+          "title" : "Mochizuki Chiyome"
+        }
+      },
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "740200",
+        "_score" : 11.492385,
+        "_source" : {
+          "title" : "Brian Donovan"
+        }
+      },
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "836909",
+        "_score" : 10.884613,
+        "_source" : {
+          "title" : "Ben Shephard"
+        }
+      },
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "530961",
+        "_score" : 10.16634,
+        "_source" : {
+          "title" : "Bad Dudes Vs. DragonNinja"
+        }
+      },
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "519100",
+        "_score" : 8.489073,
+        "_source" : {
+          "title" : "Hassan El Fad"
+        }
+      },
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "318250",
+        "_score" : 7.842163,
+        "_source" : {
+          "title" : "Template:Don Bluth"
+        }
+      },
+      {
+        "_index" : "simplewiki",
+        "_type" : "_doc",
+        "_id" : "514251",
+        "_score" : 6.9987593,
+        "_source" : {
+          "title" : "Roger Craig Smith"
+        }
+      }
+    ]
+  }
+}

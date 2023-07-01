@@ -1,0 +1,1 @@
+q=id:(doc1 OR doc2 OR doc3)&fl=id,[features store=my_featureset efi.keywords='hot dog']

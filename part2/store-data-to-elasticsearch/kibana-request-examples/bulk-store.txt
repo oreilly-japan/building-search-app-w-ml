@@ -1,0 +1,7 @@
+POST /handson_test_index/_bulk?refresh=true
+{"index":{"_id":"1"}}
+{"title": "The first document"}
+{"index":{"_id":"2"}}
+{"title": "The second document"}
+{"index":{"_id":"3"}}
+{"title": "A document for search ranking improvement"}

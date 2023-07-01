@@ -1,0 +1,4 @@
+GET /simplewiki/_count
+{
+  "query": { "match_all": {} }
+}

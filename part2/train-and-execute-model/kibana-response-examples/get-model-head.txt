@@ -1,0 +1,11 @@
+{
+  "_index": ".ltrstore",
+  "_type": "store",
+  "_id": "model-hands_on_model.json",
+  "_version": 1,
+  "_seq_no": 1,
+  "_primary_term": 1,
+  "found": true,
+  "_source": {
+    "name": "hands_on_model.json",
+    "type": "model",

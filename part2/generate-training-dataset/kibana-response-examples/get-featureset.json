@@ -1,0 +1,315 @@
+{
+  "_index": ".ltrstore",
+  "_type": "store",
+  "_id": "featureset-hands_on_featureset.json",
+  "_version": 1,
+  "_seq_no": 0,
+  "_primary_term": 1,
+  "found": true,
+  "_source": {
+    "name": "hands_on_featureset.json",
+    "type": "featureset",
+    "featureset": {
+      "name": "hands_on_featureset.json",
+      "features": [
+        {
+          "name": "pageviews",
+          "params": [],
+          "template_language": "mustache",
+          "template": {
+            "function_score": {
+              "field_value_factor": {
+                "field": "pageviews",
+                "missing": 0
+              }
+            }
+          }
+        },
+        {
+          "name": "text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match": {
+              "text": "{{keywords}}"
+            }
+          }
+        },
+        {
+          "name": "max_raw_df_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "max_raw_df",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "min_raw_df_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "min_raw_df",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "sum_raw_df_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "sum_raw_df",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "stddev_raw_df_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "stddev_raw_df",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "max_classic_idf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "max_classic_idf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "min_classic_idf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "min_classic_idf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "sum_classic_idf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "sum_classic_idf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "stddev_classic_idf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "stddev_classic_idf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "max_raw_tf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "max_raw_tf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "min_raw_tf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "min_raw_tf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "sum_raw_tf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "sum_raw_tf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "stddev_raw_tf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "stddev_raw_tf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "max_raw_ttf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "max_raw_ttf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "min_raw_ttf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "min_raw_ttf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "sum_raw_ttf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "sum_raw_ttf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "stddev_raw_ttf_text_keywords",
+          "params": [
+            "keywords"
+          ],
+          "template_language": "mustache",
+          "template": {
+            "match_explorer": {
+              "type": "stddev_raw_ttf",
+              "query": {
+                "match": {
+                  "text": "{{keywords}}"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+GET /simplewiki/_search
+{
+  "query": {
+    "match": {
+      "text": "ninja"
+    }
+  },
+  "size": 10,
+  "rescore": {
+    "query": {
+      "rescore_query": {
+        "sltr": {
+          "params": {
+            "keywords": "ninja"
+          },
+          "featureset": "hands_on_featureset.json"
+        }
+      },
+      "rescore_query_weight": 0.0
+    },
+    "window_size": 100
+  },
+  "_source": ["title"],
+  "ext": {
+    "ltr_log": {
+      "log_specs": {
+        "name": "log_entry0",
+        "rescore_index": 0
+      }
+    }
+  }
+}

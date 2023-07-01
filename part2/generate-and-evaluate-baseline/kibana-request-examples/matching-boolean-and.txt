@@ -1,0 +1,11 @@
+GET /simplewiki/_search
+{
+  "query": {
+    "match": {
+      "text": {
+        "query": "hot dog",
+        "operator": "and"
+      }
+    }
+  }
+}

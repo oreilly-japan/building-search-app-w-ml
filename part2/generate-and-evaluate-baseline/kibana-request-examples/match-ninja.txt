@@ -1,0 +1,9 @@
+GET /simplewiki/_search
+{
+  "query": {
+    "match": {
+      "text": "ninja"
+    }
+  },
+  "_source": ["title"]
+}

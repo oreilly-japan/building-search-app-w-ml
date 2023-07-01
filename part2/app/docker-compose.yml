@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  search-ui:
+    build:
+      context: .
+      dockerfile: search-ui/Dockerfile
+    ports:
+      - 8501:8501
+    environment:
+      - ELASTICSEARCH_HOSTS=http://search-engine:9200
+    depends_on:
+      search-engine:
+        condition: service_healthy
+
+  search-engine:
+    build: search-engine
+    ports:
+      - 9200:9200
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:9200"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  feeder-master-db:
+    build:
+      context: .
+      dockerfile: feeder-master-db/Dockerfile
+    tty: true
+
+  workspace:
+    build:
+      context: .
+      dockerfile: workspace/Dockerfile
+    tty: true
+    depends_on:
+      search-engine:
+        condition: service_healthy
+      kibana:
+        condition: service_healthy
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.4
+    ports:
+      - 5601:5601
+    environment:
+      - ELASTICSEARCH_HOSTS=http://search-engine:9200
+    depends_on:
+      search-engine:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:5601"]
+      interval: 5s
+      timeout: 5s
+      retries: 30

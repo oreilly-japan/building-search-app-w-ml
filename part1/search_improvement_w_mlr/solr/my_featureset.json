@@ -1,0 +1,26 @@
+[
+  {
+    "store": "my_featureset",
+    "name": "ctr_field",
+    "class": "org.apache.solr.ltr.feature.FieldValueFeature",
+    "params": {
+      "field": "ctr"
+    }
+  },
+  {
+    "store": "my_featureset",
+    "name": "or_match_score",
+    "class": "org.apache.solr.ltr.feature.SolrFeature",
+    "params": {
+      "q": "title:(${keywords})"
+    }
+  },
+  {
+    "store": "my_featureset",
+    "name": "and_match_score",
+    "class": "org.apache.solr.ltr.feature.SolrFeature",
+    "params": {
+      "q": "{!q.op=AND}title:(${keywords})"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "featureset": {
+    "features": [
+      {
+        "name": "ctr_field",
+        "template": {
+          "function_score": {
+            "field_value_factor": {
+              "field": "ctr",
+              "missing": 0
+            }
+          }
+        }
+      },
+      {
+        "name": "or_match_score",
+        "params": ["keywords"],
+        "template": {
+          "match": {
+            "title": "{{keywords}}"
+          }
+        }
+      },
+      {
+        "name": "and_match_score",
+        "params": ["keywords"],
+        "template": {
+          "match": {
+            "title": {
+              "query": "{{keywords}}",
+              "operator": "AND"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

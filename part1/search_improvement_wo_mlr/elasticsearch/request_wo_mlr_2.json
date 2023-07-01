@@ -1,0 +1,20 @@
+{
+  "query": {
+    "bool": {
+      "must": {
+        "match": {
+          "title": "hot dog"
+        }
+      },
+      "should": {
+        "match": {
+          "title": {
+            "query": "hot dog",
+            "operator": "AND",
+            "boost": 5
+          }
+        }
+      }
+    }
+  }
+}

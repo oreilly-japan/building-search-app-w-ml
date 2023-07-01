@@ -1,0 +1,8 @@
+GET /simplewiki/_search
+{
+  "query": {
+    "match": {
+      "text": "hot dog"
+    }
+  }
+}

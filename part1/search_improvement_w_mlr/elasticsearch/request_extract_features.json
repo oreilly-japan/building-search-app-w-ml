@@ -1,0 +1,31 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "_id": ["doc1", "doc2", "doc3"]
+          }
+        },
+        {
+          "sltr": {
+            "_name": "my_sltr_query",
+            "featureset": "my_featureset",
+            "params": {
+              "keywords": "hot dog"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "ext": {
+    "ltr_log": {
+      "log_specs": {
+        "name": "log_entry0",
+        "named_query": "my_sltr_query",
+        "missing_as_zero": true
+      }
+    }
+  }
+}

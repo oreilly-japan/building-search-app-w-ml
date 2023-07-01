@@ -1,0 +1,1 @@
+GET /_ltr/_model/hands_on_model.json

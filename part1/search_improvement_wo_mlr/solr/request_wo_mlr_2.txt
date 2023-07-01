@@ -1,0 +1,1 @@
+q=title:(hot dog)&defType=edismax&bq={!q.op=AND}title:(hot dog)^5

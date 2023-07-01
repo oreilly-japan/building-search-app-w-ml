@@ -1,0 +1,117 @@
+{
+  "took": 72,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 3,
+      "relation": "eq"
+    },
+    "max_score": 3.2800145,
+    "hits": [
+      {
+        "_index": "example",
+        "_type": "_doc",
+        "_id": "doc1",
+        "_score": 3.2800145,
+        "_source": {
+          "title": "Hot dog",
+          "ctr": 0.4
+        },
+        "fields": {
+          "_ltrlog": [
+            {
+              "log_entry0": [
+                {
+                  "name": "ctr_field",
+                  "value": 0.4
+                },
+                {
+                  "name": "or_match_score",
+                  "value": 0.9400072
+                },
+                {
+                  "name": "and_match_score",
+                  "value": 0.9400072
+                }
+              ]
+            }
+          ]
+        },
+        "matched_queries": [
+          "my_sltr_query"
+        ]
+      },
+      {
+        "_index": "example",
+        "_type": "_doc",
+        "_id": "doc2",
+        "_score": 1.6700037,
+        "_source": {
+          "title": "Chili dog",
+          "ctr": 0.2
+        },
+        "fields": {
+          "_ltrlog": [
+            {
+              "log_entry0": [
+                {
+                  "name": "ctr_field",
+                  "value": 0.2
+                },
+                {
+                  "name": "or_match_score",
+                  "value": 0.4700036
+                },
+                {
+                  "name": "and_match_score",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "matched_queries": [
+          "my_sltr_query"
+        ]
+      },
+      {
+        "_index": "example",
+        "_type": "_doc",
+        "_id": "doc3",
+        "_score": 1.4700036,
+        "_source": {
+          "title": "Hot spring"
+        },
+        "fields": {
+          "_ltrlog": [
+            {
+              "log_entry0": [
+                {
+                  "name": "ctr_field",
+                  "value": 0.0
+                },
+                {
+                  "name": "or_match_score",
+                  "value": 0.4700036
+                },
+                {
+                  "name": "and_match_score",
+                  "value": 0.0
+                }
+              ]
+            }
+          ]
+        },
+        "matched_queries": [
+          "my_sltr_query"
+        ]
+      }
+    ]
+  }
+}

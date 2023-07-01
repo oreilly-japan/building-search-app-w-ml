@@ -1,0 +1,29 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 7,
+    "params": {
+      "q": "id:(doc1 OR doc2 OR doc3)",
+      "fl": "id,[features store=my_featureset efi.keywords='hot dog']"
+    }
+  },
+  "response": {
+    "numFound": 3,
+    "start": 0,
+    "numFoundExact": true,
+    "docs": [
+      {
+        "id": "doc1",
+        "[features]": "ctr_field=0.4,or_match_score=0.42727602,and_match_score=0.42727602"
+      },
+      {
+        "id": "doc2",
+        "[features]": "ctr_field=0.2,or_match_score=0.21363801,and_match_score=0.0"
+      },
+      {
+        "id": "doc3",
+        "[features]": "ctr_field=0.0,or_match_score=0.21363801,and_match_score=0.0"
+      }
+    ]
+  }
+}
